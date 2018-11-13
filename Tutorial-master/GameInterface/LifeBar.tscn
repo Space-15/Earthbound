@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GameInterface/Bar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GameInterface/LifeBar.gd" type="Script" id=2]
+
+[node name="LifeBar" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="counter" index="1"]
+
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -85.0
+margin_top = 14.0
+margin_right = -33.0
+margin_bottom = 45.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "70/100"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_styles" ]
+
+[node name="Tween" type="Tween" parent="." index="2"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+
