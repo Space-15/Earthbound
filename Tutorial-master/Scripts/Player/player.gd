@@ -21,8 +21,8 @@ func get_oxygen_node():
 func take_damage(damage):
 	health.take_damage(damage)
 	
-func lose_oxygen(oxygen):
-	oxygen.lose_oxygen(oxygen)
+func lose_oxygen(atm):
+	oxygen.lose_oxygen(atm)
 	
 func _physics_process(delta):
 	controls_loop()
@@ -39,6 +39,12 @@ func _physics_process(delta):
 		anim_switch("idle")
 	if Input.is_action_just_pressed("a") and idle == true:
 		anim_switch("attack")
+		
+	if Input.is_action_just_pressed("t"):
+		lose_oxygen(5)
+		
+	if Input.is_action_just_pressed("y"):
+		take_damage(5)		
 		
 func controls_loop():
 	var LEFT	= Input.is_action_pressed("ui_left")

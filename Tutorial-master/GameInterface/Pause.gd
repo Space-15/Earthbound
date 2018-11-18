@@ -14,7 +14,7 @@ func _on_resumeBtn_pressed():
 
 
 func _on_menuBtn_pressed():
-	get_tree().change_scene("res://title_screen/TitleScreen.tscn")
+	get_tree().change_scene("res://MainMenu/title_screen/TitleScreen.tscn")
 
 
 func _on_saveBtn_pressed():

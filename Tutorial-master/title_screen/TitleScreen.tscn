@@ -118,6 +118,7 @@ margin_right = 435.0
 margin_bottom = 190.0
 rect_min_size = Vector2( 360, 50 )
 _sections_unfolded = [ "Rect" ]
+scene_to_load = "res://Map/Tutorial/Map2.tscn"
 
 [node name="OptionsButton" parent="Menu/CenterRow/Buttons" index="3" instance=ExtResource( 6 )]
 

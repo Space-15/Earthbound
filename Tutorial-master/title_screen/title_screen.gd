@@ -15,6 +15,6 @@ func _on_FadeIn_fade_finished():
 	get_tree().change_scene(scene_path_to_load)
 
 
-func _on_TutorialButton_pressed():
-	get_tree().change_scene("res://Map/Tutorial/Map2.tscn")
+#func _on_TutorialButton_pressed():
+	#get_tree().change_scene("res://Map/Tutorial/Map2.tscn")
 	
