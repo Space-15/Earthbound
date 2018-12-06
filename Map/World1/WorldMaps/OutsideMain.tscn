@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Map/World1/WorldMaps/Outside.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/playerSpawnPoint.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Character/Heydies.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Items/baguette.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Items/tank.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Items/radar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Items/FluxCapacitor.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/LiquidHydrogenTank.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Items/RocketBooster.tscn" type="PackedScene" id=9]
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Node2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 27.05, 32.2789 )
+
+[node name="playerSpawnPoint" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 271.83, 291.872 )
+
+[node name="alien" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 1221.49, 1064.57 )
+
+[node name="alien2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 115.643, 1808.82 )
+
+[node name="alien3" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 1504.49, -896.473 )
+
+[node name="alien4" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 2659.52, 1640.63 )
+
+[node name="alien5" parent="." index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 5661.17, 1788.24 )
+
+[node name="alien6" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 3006.34, 3048.74 )
+
+[node name="alien7" parent="." index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 3979.25, 287.498 )
+
+[node name="alien8" parent="." index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 3080.34, -212.049 )
+
+[node name="key" parent="." index="10" instance=ExtResource( 4 )]
+
+position = Vector2( 654.045, 510.421 )
+scale = Vector2( 0.529978, 0.575603 )
+
+[node name="key4" parent="." index="11" instance=ExtResource( 4 )]
+
+position = Vector2( -465.398, 1185.51 )
+scale = Vector2( 0.529978, 0.575603 )
+
+[node name="key2" parent="." index="12" instance=ExtResource( 4 )]
+
+position = Vector2( 3532.35, 1664.09 )
+scale = Vector2( 0.529978, 0.575603 )
+
+[node name="key3" parent="." index="13" instance=ExtResource( 4 )]
+
+position = Vector2( -930.591, -501.723 )
+scale = Vector2( 0.924154, 0.575603 )
+
+[node name="tank" parent="." index="14" instance=ExtResource( 5 )]
+
+position = Vector2( -1166.22, 2089.96 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank2" parent="." index="15" instance=ExtResource( 5 )]
+
+position = Vector2( 252.88, 407.807 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank3" parent="." index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 5175.84, -1047.72 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank4" parent="." index="17" instance=ExtResource( 5 )]
+
+position = Vector2( 3043.8, 2421.36 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank5" parent="." index="18" instance=ExtResource( 5 )]
+
+position = Vector2( 1216.34, 2612.36 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank6" parent="." index="19" instance=ExtResource( 5 )]
+
+position = Vector2( 5078.82, 2914.34 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="tank7" parent="." index="20" instance=ExtResource( 5 )]
+
+position = Vector2( -1143.28, -1313.32 )
+scale = Vector2( 0.908184, 1.12525 )
+
+[node name="radar" parent="." index="21" instance=ExtResource( 6 )]
+
+position = Vector2( 657.875, 1958.2 )
+scale = Vector2( 2.97018, 3.10802 )
+
+[node name="flux" parent="." index="22" instance=ExtResource( 7 )]
+
+position = Vector2( 4906.92, 2625.06 )
+scale = Vector2( 0.76808, 1.12533 )
+
+[node name="liquidTank" parent="." index="23" instance=ExtResource( 8 )]
+
+position = Vector2( 4597.65, 539.455 )
+scale = Vector2( 1.29775, 2.11668 )
+
+[node name="RocketBooster" parent="." index="24" instance=ExtResource( 9 )]
+
+position = Vector2( 6123.94, -350.011 )
+scale = Vector2( 1.18937, 1.92958 )
+
+

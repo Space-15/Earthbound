@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/maploader.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Character/attack2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Player/player.gd" type="Script" id=3]
+[ext_resource path="res://GameInterface/Interface.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GameInterface/Interface.gd" type="Script" id=5]
+[ext_resource path="res://Pause.tscn" type="PackedScene" id=6]
+
+[node name="maploader" type="Node"]
+
+script = ExtResource( 1 )
+START = "res://Map/World1/WorldMaps/OutsideMain.tscn"
+
+[node name="player" type="KinematicBody2D" parent="." index="0" groups=[
+"actors",
+] instance=ExtResource( 2 )]
+
+editor/display_folded = true
+position = Vector2( 121.763, 100.52 )
+scale = Vector2( 0.34, 0.34 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Interface" type="Control" parent="player" index="7" instance=ExtResource( 4 )]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -366.95
+margin_top = -286.824
+margin_right = -366.95
+margin_bottom = -350.824
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 5 )
+
+[node name="OxygenTimer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2" instance=ExtResource( 6 )]
+
+editor/display_folded = true
+layer = 100
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[connection signal="health_changed" from="player/Interface" to="player/Interface/Bars/LifeBar" method="_on_Interface_health_changed"]
+
+[connection signal="oxygen_changed" from="player/Interface" to="player/Interface/Bars/OxygenBar" method="_on_Interface_oxygen_changed"]
+
+[connection signal="timeout" from="OxygenTimer" to="player" method="_on_Timer_timeout"]
+
+
